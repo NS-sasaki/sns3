@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
             <h1 class="mb-4">ユーザー登録</h1>
+            {#  ここ{% url 'account_signup' %}は、Allauthを使う際の定型文#}
             <form method="POST" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {% bootstrap_form form %}

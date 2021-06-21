@@ -42,13 +42,13 @@
                 </li>{% endif %}
             </ul>
             <ul class="navbar-nav navbar-right">{% if user.is_authenticated %}
-                <li class="nav-item">
+                <li class="nav-item">{# {% url 'account_logout' %}は、Allauthの定型文 #}
                     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                 </li>{% else %}
-                <li class="nav-item">
+                <li class="nav-item">{# {% url 'account_login' %}は、Allauthの定型文 #}
                     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item">{# {% url 'account_signup' %}は、Allauthの定型文 #}
                     <a class="nav-link" href="{% url 'account_signup' %}">Sign in</a>
                 </li>{% endif %}
             </ul>
