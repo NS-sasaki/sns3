@@ -31,13 +31,17 @@ INSTALLED_APPS = [
     'allauth',  # 追加
     'allauth.account',  # 追加
     'allauth.socialaccount',  # 追加
-
 ]
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/accounts/home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# Bootstrap4 jqueryを使用するため追加
+BOOTSTRAP4 = {
+    'include_jquery': True,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,8 +58,7 @@ ROOT_URLCONF = 'sns2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']  # VSCodeの場合は変更
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
