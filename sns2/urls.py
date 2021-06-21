@@ -5,6 +5,8 @@ from . import settings  # mediaを使うために追加
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),  # 追加
+    path('accounts/', include('accounts.urls')),  # 追加
 ]
 
 if settings.DEBUG:

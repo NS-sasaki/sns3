@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <div class="center jumbotron">
+        <div class="text-center">
+            <h1>Welcome to the Microposts</h1>
+            {#  ここ{% url 'account_signup' %}は、Allauthを使う際の定型文#}
+            <a class="btn btn-outline-secondary btn-sm"
+               href="{% url 'account_signup' %}"
+               role="button">Sign in Now!</a>
+        </div>
+    </div>
+{% endblock %}
